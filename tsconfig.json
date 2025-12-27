@@ -3,9 +3,8 @@
     "target": "ES2019",
     "module": "ESNext",
     "declaration": true,
-    "outDir": "dist",
     "strict": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "skipLibCheck": true,
     "types": ["tinymce"]
   },
