@@ -1,0 +1,21 @@
+{
+  "name": "tinymce-inline-comments",
+  "version": "0.1.0",
+  "description": "Headless inline comments plugin for TinyMCE",
+  "main": "dist/inline-comments.umd.js",
+  "module": "dist/inline-comments.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "author": "Chirag Bhandakkar",
+  "keywords": [
+    "tinymce",
+    "comments",
+    "annotations"
+  ],
+  "scripts": {
+    "build": "vite build"
+  }
+}
