@@ -1,43 +1,69 @@
 # tinymce-inline-comments
 
+![npm](https://img.shields.io/npm/v/tinymce-inline-comments)
+![license](https://img.shields.io/npm/l/tinymce-inline-comments)
+![downloads](https://img.shields.io/npm/dw/tinymce-inline-comments)
+
 A **headless, Google Docs–style inline comments plugin for TinyMCE**.
 
 This plugin enables **inline annotations** on selected text and emits
-**comment lifecycle events** (add / select / delete), while keeping
-all **UI, backend APIs, permissions, and threading logic in your app**.
+**comment lifecycle events** (`add`, `select`, `delete`) while keeping
+**UI, backend APIs, permissions, mentions, and threading logic fully in your app**.
 
 Designed for:
 
-- Contract editors
-- Legal documents
+- Contract & legal editors
 - Review & approval workflows
 - Collaborative document tools
+- Enterprise-grade editors
 
 ---
 
-## Links
+## 🔗 Links
 
-- **GitHub Repository:**  
+- **GitHub Repository**  
   https://github.com/chiraagb/tinymce-inline-comments
 
-- **Issues & Feature Requests:**  
+- **Issues & Feature Requests**  
   https://github.com/chiraagb/tinymce-inline-comments/issues
+
+- **Live Demo (CodeSandbox)**  
+  https://codesandbox.io/s/c85wj6
 
 ---
 
-## Features
+## ✨ Why Headless?
+
+Most comment plugins tightly couple **UI + storage + editor logic**.
+
+This plugin does **only one thing**:
+
+> Manage inline annotations and emit meaningful editor events.
+
+You control everything else.
+
+**Benefits:**
+
+- Works with _any_ backend
+- Works with _any_ UI framework
+- No assumptions about permissions or workflows
+- Easy to extend for enterprise use
+
+---
+
+## ✨ Features
 
 - Inline comment annotations using `<span>`
 - Selection-based comments
-- Event-driven (no backend coupling)
+- Event-driven architecture (no backend coupling)
 - Annotation delete / unwrap API
 - Framework-agnostic
 - React / Vue / Angular / Vanilla JS friendly
-- Thread-ready architecture
+- Thread-ready architecture (`annotationId` as thread key)
 
 ---
 
-## Installation
+## 📦 Installation
 
 ```bash
 npm install tinymce-inline-comments
@@ -45,7 +71,7 @@ npm install tinymce-inline-comments
 
 ---
 
-## Basic Usage (React Example)
+## 🚀 Basic Usage (React Example)
 
 ```tsx
 import { Editor } from "@tinymce/tinymce-react";
@@ -86,7 +112,7 @@ import { registerInlineComments } from "tinymce-inline-comments";
 
 ---
 
-## Events
+## 🔔 Events
 
 ### `inline-comments:add`
 
@@ -125,7 +151,7 @@ Fired when an annotation is removed.
 
 ---
 
-## API
+## 🧠 API
 
 ### `editor.removeInlineComment(annotationId: string)`
 
@@ -137,7 +163,7 @@ editor.removeInlineComment(annotationId);
 
 ---
 
-## Architecture (Important)
+## 🏗 Architecture
 
 This plugin is intentionally **headless**.
 
@@ -150,15 +176,9 @@ This plugin is intentionally **headless**.
 | Threaded comments    | Your app       |
 | Inline annotations   | This plugin    |
 
-This design makes the plugin:
-
-- Enterprise-safe
-- Highly reusable
-- Easy to extend
-
 ---
 
-## Threaded Comments (Recommended Pattern)
+## 🧵 Threaded Comments (Recommended Pattern)
 
 Use `annotationId` as the thread key:
 
@@ -176,16 +196,27 @@ The plugin does **not** enforce a data model.
 
 ---
 
-## Notes
+## 🔴 Live Demo(React)
 
-- The plugin does **not** store comments
-- The plugin does **not** make API calls
-- The plugin does **not** manage UI state
+Try the plugin in a real TinyMCE editor:
 
-This is by design.
+👉 **CodeSandbox Demo**
+[https://codesandbox.io/s/c85wj6](https://codesandbox.io/s/c85wj6)
+
+> Select text → click the comment icon → click highlighted text to select.
 
 ---
 
-## License
+## ⚠️ Notes
+
+- This plugin does **not** store comments
+- This plugin does **not** make API calls
+- This plugin does **not** manage UI state
+
+This is intentional.
+
+---
+
+## 📄 License
 
 MIT © Chirag Bhandakkar
