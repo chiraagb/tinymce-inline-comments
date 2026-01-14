@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/tinymce-inline-comments)
 ![license](https://img.shields.io/npm/l/tinymce-inline-comments)
-![downloads](https://img.shields.io/npm/dw/tinymce-inline-comments)
+![downloads](https://img.shields.io/npm/dt/tinymce-inline-comments)
 
 A **headless, Google Docs–style inline comments plugin for TinyMCE**.
 
